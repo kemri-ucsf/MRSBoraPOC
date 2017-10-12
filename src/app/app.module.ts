@@ -9,6 +9,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { HomeComponent }   from './home/home.component';
 import { LoginComponent }   from './authenticate/login.component';
 import { PatientSearchComponent }   from './patient-search/patient-search.component';
+import { PatientDashboardComponent }   from './patient-search/patient-dashboard.component';
 import { NoContentComponent } from './no-content/no-content';
 
 // Routing modules
@@ -25,6 +26,7 @@ import { AppRoutingModule }     from './settings/app-routing.module';
     DashboardComponent,
     LoginComponent,
     PatientSearchComponent,
+    PatientDashboardComponent,
     HomeComponent,
     NoContentComponent
   ],
