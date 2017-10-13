@@ -4,10 +4,10 @@ import { Subscription } from 'rxjs';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: './patient-search.component.html',
-  styleUrls: [ './patient-search.component.css' ]
+  templateUrl: './patient-lab-orders.component.html',
+  styleUrls: [ './patient-lab-orders.component.css' ]
 })
 
 
-export class PatientSearchComponent {	
+export class PatientLabOrdersComponent {	
 }

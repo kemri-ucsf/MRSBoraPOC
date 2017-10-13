@@ -6,7 +6,11 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { LoginComponent } from '../authenticate/login.component';
 import { PatientSearchComponent } from '../patient-search/patient-search.component';
 import { PatientDashboardComponent } from '../patient-search/patient-dashboard.component';
+import { PatientLabOrdersComponent } from '../orders/patient-lab-orders.component';
+import { LaboratoryDashboardComponent } from '../orders/lab-dashboard.component';
+import { ReportDashboardComponent } from '../reports/report-dashboard.component';
 import { NoContentComponent } from '../no-content/no-content';
+
  
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -14,8 +18,16 @@ const routes: Routes = [
     path: 'mrsbora', component: HomeComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
+      
       { path: 'patient-search', component: PatientSearchComponent },
-      { path: 'patient-dashboard', component: PatientDashboardComponent },
+      { 
+        path: 'patient-dashboard', component: PatientDashboardComponent,
+        children: [
+          { path: 'patient-lab-orders', component: PatientLabOrdersComponent }
+        ]
+      },
+      { path: 'lab-dashboard', component: LaboratoryDashboardComponent },
+      { path: 'report-dashboard', component: ReportDashboardComponent },
       { path: 'no-content', component: NoContentComponent }
     ]
   },

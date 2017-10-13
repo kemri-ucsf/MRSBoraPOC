@@ -10,6 +10,9 @@ import { HomeComponent }   from './home/home.component';
 import { LoginComponent }   from './authenticate/login.component';
 import { PatientSearchComponent }   from './patient-search/patient-search.component';
 import { PatientDashboardComponent }   from './patient-search/patient-dashboard.component';
+import { PatientLabOrdersComponent } from './orders/patient-lab-orders.component';
+import { LaboratoryDashboardComponent } from './orders/lab-dashboard.component';
+import { ReportDashboardComponent } from './reports/report-dashboard.component';
 import { NoContentComponent } from './no-content/no-content';
 
 // Routing modules
@@ -23,11 +26,14 @@ import { AppRoutingModule }     from './settings/app-routing.module';
   ],
   declarations: [
     AppComponent,
+    HomeComponent,
     DashboardComponent,
     LoginComponent,
     PatientSearchComponent,
     PatientDashboardComponent,
-    HomeComponent,
+    PatientLabOrdersComponent,
+    LaboratoryDashboardComponent,
+    ReportDashboardComponent,
     NoContentComponent
   ],
   // providers: [ HeroService ],
