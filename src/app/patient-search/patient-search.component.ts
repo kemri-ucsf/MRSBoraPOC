@@ -4,8 +4,8 @@ import { Subscription } from 'rxjs';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: './patient-search.component.html',
-  styleUrls: [ './patient-search.component.css' ]
+  templateUrl: 'app/patient-search/patient-search.component.html',
+  styleUrls: [ 'app/patient-search/patient-search.component.css' ]
 })
 
 

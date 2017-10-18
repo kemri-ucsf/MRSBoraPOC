@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: './patient-dashboard.component.html',
-  styleUrls: [ './patient-dashboard.component.css' ]
+  templateUrl: 'app/patient-search/patient-dashboard.component.html',
+  styleUrls: [ 'app/patient-search/patient-dashboard.component.css' ]
 })
 
 

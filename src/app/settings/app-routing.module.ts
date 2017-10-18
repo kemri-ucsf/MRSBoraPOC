@@ -7,6 +7,7 @@ import { LoginComponent } from '../authenticate/login.component';
 import { PatientSearchComponent } from '../patient-search/patient-search.component';
 import { PatientDashboardComponent } from '../patient-search/patient-dashboard.component';
 import { PatientLabOrdersComponent } from '../orders/patient-lab-orders.component';
+import { PatientEncountersComponent } from '../patient-encounters/patient-encounters.component';
 import { LaboratoryDashboardComponent } from '../orders/lab-dashboard.component';
 import { ReportDashboardComponent } from '../reports/report-dashboard.component';
 import { NoContentComponent } from '../no-content/no-content';
@@ -23,7 +24,8 @@ const routes: Routes = [
       { 
         path: 'patient-dashboard', component: PatientDashboardComponent,
         children: [
-          { path: 'patient-lab-orders', component: PatientLabOrdersComponent }
+          { path: 'patient-lab-orders', component: PatientLabOrdersComponent },
+          { path: 'patient-encounters', component: PatientEncountersComponent }
         ]
       },
       { path: 'lab-dashboard', component: LaboratoryDashboardComponent },
