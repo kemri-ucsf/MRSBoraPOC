@@ -1,8 +1,5 @@
 import { Component, TemplateRef } from '@angular/core';
-// import { BsModalService } from 'ngx-bootstrap/modal';
-// import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
-import { PatientEncountersDialogComponent } from './patient-encounters-dialog.component';
 
 @Component({
   // selector: 'my-app',
