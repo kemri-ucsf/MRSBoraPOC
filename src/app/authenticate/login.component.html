@@ -1,6 +1,6 @@
 <div class="center-vertical">
     <div class="center-content row">
-        <form action="#" id="login-validation" class="col-md-4 col-sm-5 col-xs-11 col-lg-3 center-margin" method="">
+        <form id="login-validation" class="col-md-4 col-sm-5 col-xs-11 col-lg-3 center-margin" (submit)="login(username.value, password.value)">
             <h3 class="text-center pad25B font-gray text-transform-upr font-size-23">MRS BORA <span class="opacity-80">v1.0</span></h3>
             <div id="login-form" class="content-box bg-default">
                 <div class="content-box-wrapper pad20A">
@@ -10,7 +10,7 @@
                             <span class="input-group-addon addon-inside bg-gray">
                                 <i class="glyph-icon icon-linecons-user"></i>
                             </span>
-                            <input type="email" class="form-control" id="username" placeholder="Username">
+                            <input type="text" class="form-control" #username="" placeholder="Username">
                         </div>
                     </div>
                     <div class="form-group">
@@ -18,11 +18,14 @@
                             <span class="input-group-addon addon-inside bg-gray">
                                 <i class="glyph-icon icon-unlock-alt"></i>
                             </span>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <input type="password" class="form-control" #password="" placeholder="Password">
                         </div>
                     </div>
                     <div class="form-group">
-                        <a routerLink="/mrsbora" class="btn btn-block btn-primary">Login</a>
+                        <!-- <a routerLink="/mrsbora" class="btn btn-block btn-primary">Login</a> -->
+                        <button class="btn btn-block btn-primary" type="submit">
+                            <b><small>Login</small></b>
+                        </button>
                     </div>
                     <div class="row">
                         <div class="checkbox-primary col-md-6" style="height: 20px;">

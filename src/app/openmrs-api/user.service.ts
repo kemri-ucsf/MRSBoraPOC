@@ -5,8 +5,8 @@ import { Http , Response , Headers, RequestOptions } from '@angular/http';
 import { SessionStorageService } from '../utils/session-storage.service';
 import { Constants } from '../utils/constants';
 import { User } from '../models/user.model';
-import {  URLSearchParams } from '@angular/http';
-import { AppSettingsService } from '../app-settings';
+import { URLSearchParams } from '@angular/http';
+import { AppSettingsService } from '../settings/app-settings.service';
 
 @Injectable()
 export class UserService {

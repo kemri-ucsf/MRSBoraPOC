@@ -19,18 +19,14 @@
               <div class="modal-header">
                 <h4 class="modal-title pull-left">Select Encounter</h4>
                 <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
+                  <span aria-hidden="true">close</span>
                 </button>
               </div>
               <div class="modal-body"  style="height: 280px; overflow: auto;" >
-                <button type="button" class="btn btn-default btn-block"><p _ngcontent-c1="">6MONTH SUPPLEMENT</p></button>
-                <button type="button" class="btn btn-default btn-block">ADHERENCE</button>
-                <button type="button" class="btn btn-default btn-block">ADULTINITIAL</button>
-                <button type="button" class="btn btn-default btn-block">ADULTRETURN</button>                
+                <button type="button" class="btn btn-default btn-block" routerLink="/mrsbora/patient-dashboard/patient-clinical" (click)="modalRef.hide()">CLINICAL ENCOUNTER</button>
+                <button type="button" class="btn btn-default btn-block">NUTRITIONAL ENCOUNTER</button>        
                 <button type="button" class="btn btn-default btn-block">ARVS REFILL</button>
-                <button type="button" class="btn btn-default btn-block">VIRAL LOAD</button>
-                <button type="button" class="btn btn-default btn-block">VMMC INITIAL</button>
-                <button type="button" class="btn btn-default btn-block">VMMC FOLLOWUP</button>
+                <button class="btn btn-default btn-block" routerLink="/mrsbora/patient-dashboard/patient-triage" (click)="modalRef.hide()">VMMC</button>
               </div>
             </ng-template>
            

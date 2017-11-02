@@ -14,9 +14,11 @@
 		    <div class="row">
 		    	<div class="col-md-4">		    	
 	                <div class="input-group">
-	                    <input class="form-control" type="text" placeholder="Enter Patient Identifier or Patient Name">
+	                    <input class="form-control" type="text" [(ngModel)]="searchString" placeholder="Enter Patient Identifier or Patient Name">
 	                    <span class="input-group-btn">
-	                        <button class="btn btn-primary" type="button"><b><small>Search</small></b></button>
+	                        <button class="btn btn-primary" type="button" (click)="loadPatient()">
+	                        	<b><small>Search</small></b>
+	                        </button>
 	                    </span>
 	                </div>
 	            </div>
@@ -34,7 +36,7 @@
 			<div class="row">
 				<div class="example-box-wrapper">
 		            <div class="scroll-columns">
-		                <table class="table table-bordered table-striped table-condensed table-hover cf">
+		                <table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap dataTable dtr-inline" cellspacing="0" width="100%" role="grid" aria-describedby="datatable-responsive_info" style="width: 100%;">
 		                    <thead class="cf">
 		                    <tr>
 		                        <th><small>IDENTIFIER</small></th>
@@ -48,7 +50,7 @@
 		                    </tr>
 		                    </thead>
 		                    <tbody>
-		                    <tr>
+		                    <tr style="cursor: pointer;">
 		                        <td>Tiger Nixon</td>
 							    <td>System Architect</td>
 							    <td>Edinburgh</td>
@@ -58,7 +60,7 @@
 							    <td>2011/04/25</td>
 							    <td><span><a routerLink="/mrsbora/patient-dashboard">Select</a></span></td>
 		                    </tr>
-		                    <tr>
+		                    <tr style="cursor: pointer;">
 							    <td>Garrett Winters</td>
 							    <td>Accountant</td>
 							    <td>Tokyo</td>

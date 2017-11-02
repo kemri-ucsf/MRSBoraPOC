@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+/*
 import { LocationResourceService } from './location-resource.service';
 import { AppSettingsModule } from '../app-settings/app-settings.module';
 import { FormsResourceService } from './forms-resource.service';
@@ -20,30 +21,28 @@ import {
  } from './patient-relationship-type-resource.service';
 import { PatientIdentifierTypeResService } from './patient-identifierTypes-resource.service';
 
+
+// Services
+//import { AuthenticationService } from './authentication.service'
+import { PersonResourceService } from './person-resource.service';
+import { PatientResourceService } from './patient-resource.service';
+import { SessionService } from './session.service'
+
+// Modules
+import { AppSettingsModule } from '../settings/app-settings.module';
+*/
+
+
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 
 @NgModule({
-  imports: [CommonModule, AppSettingsModule],
+  imports: [
+    CommonModule
+    ],
   declarations: [],
-  providers: [
-    LocationResourceService,
-    FormsResourceService,
-    PatientResourceService,
-    EncounterResourceService,
-    ProgramResourceService,
-    ProgramEnrollmentResourceService,
-    UserService,
-    ProviderResourceService,
-    PersonResourceService,
-    ConceptResourceService,
-    VisitResourceService,
-    OrderResourceService,
-    PatientRelationshipResourceService,
-    PatientRelationshipTypeResourceService,
-    PatientIdentifierTypeResService
-  ],
+  providers: [],
   exports: []
 })
 

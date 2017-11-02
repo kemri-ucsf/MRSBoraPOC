@@ -10,6 +10,9 @@ import { PatientNewComponent } from '../patient-new/patient-new.component';
 import { PatientDashboardComponent } from '../patient-search/patient-dashboard.component';
 import { PatientLabOrdersComponent } from '../orders/patient-lab-orders.component';
 import { PatientEncountersComponent } from '../patient-encounters/patient-encounters.component';
+import { PatientTriageComponent } from '../patient-encounters/patient-triage.component';
+import { PatientHistoryComponent } from '../patient-encounters/patient-history.component';
+import { PatientClinicalComponent } from '../patient-encounters/patient-clinical.component';
 import { LaboratoryDashboardComponent } from '../orders/lab-dashboard.component';
 import { DrugOrdersComponent } from '../orders/drug-orders.component';
 import { DrugsDashboardComponent } from '../orders/drugs-dashboard.component';
@@ -30,6 +33,9 @@ const routes: Routes = [
           { path: 'reception', component: ReceptionComponent },
           { path: 'patient-lab-orders', component: PatientLabOrdersComponent },
           { path: 'patient-encounters', component: PatientEncountersComponent },
+          { path: 'patient-triage', component: PatientTriageComponent },
+          { path: 'patient-history', component: PatientHistoryComponent },
+          { path: 'patient-clinical', component: PatientClinicalComponent },
           { path: 'drug-orders', component: DrugOrdersComponent }
         ]
       },

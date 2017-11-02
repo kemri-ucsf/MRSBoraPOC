@@ -12,6 +12,7 @@
     // ng2-bootstrap
     //'moment': 'node_modules/moment',
     'ngx-bootstrap':              'node_modules/ngx-bootstrap',
+    'ngx-cookie':              'node_modules/ngx-cookie',
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
@@ -20,6 +21,7 @@
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
     // ng2-bootstrap
     'ngx-bootstrap':              { main: 'bundles/ngx-bootstrap.umd.js', defaultExtension: 'js' },
+    'ngx-cookie':              { main: 'bundles/ngx-cookie.umd.js', defaultExtension: 'js' },
     // 'moment':                     { main: 'moment.js', defaultExtension: 'js' },
   };
   var ngPackageNames = [

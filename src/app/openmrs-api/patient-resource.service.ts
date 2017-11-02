@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AppSettingsService } from '../app-settings';
+import { AppSettingsService } from '../settings/app-settings.service';
 import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angular/http';
 import { Observable, Subject } from 'rxjs/Rx';
 
@@ -20,7 +20,6 @@ export class PatientResourceService {
   }
 
   public getUrl(): string {
-
     return this.appSettingsService.getOpenmrsRestbaseurl().trim() + 'patient';
   }
 
@@ -37,6 +36,7 @@ export class PatientResourceService {
     return this.http.get(url, {
       search: params
     })
+
       .map((response: Response) => {
         return response.json().results;
       });

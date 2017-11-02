@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 // Components
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { PatientNewComponent } from './patient-new/patient-new.component';
 import { PatientDashboardComponent }   from './patient-search/patient-dashboard.component';
 import { PatientLabOrdersComponent } from './orders/patient-lab-orders.component';
 import { PatientEncountersComponent } from './patient-encounters/patient-encounters.component';
+import { PatientTriageComponent } from './patient-encounters/patient-triage.component';
+import { PatientHistoryComponent } from './patient-encounters/patient-history.component';
+import { PatientClinicalComponent } from './patient-encounters/patient-clinical.component';
 import { LaboratoryDashboardComponent } from './orders/lab-dashboard.component';
 import { DrugOrdersComponent } from './orders/drug-orders.component';
 import { DrugsDashboardComponent } from './orders/drugs-dashboard.component';
@@ -21,18 +25,34 @@ import { ReportDashboardComponent } from './reports/report-dashboard.component';
 import { NoContentComponent } from './no-content/no-content';
 
 
-// Routing modules
+// Modules
 import { AppRoutingModule }     from './settings/app-routing.module';
+import { CookieModule } from 'ngx-cookie';
 
-// Service Providers
-import * as ngx_core from 'ngx-bootstrap';
+// External Lib Service Providers
+import * as ngx_bootstrap from 'ngx-bootstrap';
+// import * as ngx_cookie from 'ngx-cookie';
+
+// OpenMRS REST API service providers
+import { AuthenticationService } from './openmrs-api/authentication.service';
+import { SessionService } from './openmrs-api/session.service';
+import { PatientSearchService } from './patient-search/patient-search.service';
+import { PatientResourceService } from './openmrs-api/patient-resource.service';
+
+// Custom Service Providers
+import { AppSettingsService } from './settings/app-settings.service'
+import { LocalStorageService } from './utils/local-storage.service'
+import { SessionStorageService } from './utils/session-storage.service'
+
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ngx_core.ModalModule,
+    HttpModule,
+    CookieModule.forRoot(),
+    ngx_bootstrap.ModalModule,
   ],
   declarations: [
     AppComponent,
@@ -45,7 +65,10 @@ import * as ngx_core from 'ngx-bootstrap';
     PatientDashboardComponent,
     PatientLabOrdersComponent,
     PatientEncountersComponent,
+    PatientTriageComponent,
+    PatientClinicalComponent,
     LaboratoryDashboardComponent,
+    PatientHistoryComponent,
     DrugOrdersComponent,
     DrugsDashboardComponent,
     ReportDashboardComponent,
@@ -53,10 +76,22 @@ import * as ngx_core from 'ngx-bootstrap';
   ],
   // entryComponents: [ngx_core.ModalBackdropComponent],
   providers: [
-    // dialog providers 
-    ngx_core.BsModalService,
-    ngx_core.PositioningService, 
-    ngx_core.ComponentLoaderFactory 
+    // external providers 
+    ngx_bootstrap.BsModalRef,
+    ngx_bootstrap.BsModalService,
+    ngx_bootstrap.PositioningService, 
+    ngx_bootstrap.ComponentLoaderFactory,
+
+    //openmrs-rest-api providers    
+    AuthenticationService,
+    PatientSearchService,
+    PatientResourceService,
+    SessionService,
+
+    // custom providers
+    AppSettingsService,
+    LocalStorageService,
+    SessionStorageService
   ],
   bootstrap: [ 
     AppComponent
