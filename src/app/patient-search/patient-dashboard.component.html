@@ -2,109 +2,82 @@
 	<div id="page-content">            
 		<div class="container">
 			<div id="page-title">
-				<h2>MRS BORA PATIENT DASHBOARD</h2>
+				<h2>PATIENT DASHBOARD</h2>
 				<p>Patient Dashboard</p>
+				<br>
+				<h5><font color="blue"><b>MIGO HUSSEIN EL SAFRA (UPN: KLM0098-123)  |  Male  |  46 years  |  BMI : 123  |  Weight : 65kgs  |  Height : 1.7m</b></font></h5>
+
 			</div>
 
+			
 			<div class="row">
-				<h5 class="mrg10A">
-					<i class="glyph-icon icon-user"></i> &nbsp;
-					Tiger Nixon | Male | 46 years | BMI : 123 | Weight : 65kgs | Height : 1.7cm
-				</h5>				
-			</div>
+				<div class="list-group">
+					<a class="list-group-item "><b>VISIT DETAILS : &nbsp;<font color="maroon">6 MONTH TCA   |  ON SCHEDULE</font></b></a>
+                    <a class="list-group-item "><b>VITALS : &nbsp;<font color="red">BMI: 29   |  TEMP: 37  |  PULSE: 123pm</font></b></a>
+                    <a class="list-group-item "><b>LAB RESULTS(PREVIOUS) : &nbsp;<font color="blue">VL: 29  |  SCRAG: +ve </font></b></a>
+                    <a class="list-group-item "><b>CRITICAL FINDINGS : &nbsp;<font color="orange">Allergies: None</font></b></a>
+                </div>
+            </div>	
 			<br>
 
 		    <br>
-			<div class="row">
+			<div class="row"> 
 				<div class="example-box-wrapper">
 		            <div class="scroll-columns">
-
-		            	<div class="col-md-12">
+		            	<div class="col-md-12" style="height: 100px;">
 		                    <div class="tile-box bg-white content-box">
-		                        <div class="tile-content-wrapper">
-		                            
-		                                <div class="content-box remove-border dashboard-buttons clearfix">
-		                                	<a routerLink="/mrsbora/patient-dashboard/reception" class="btn vertical-button hover-blue" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-calendar"></i>
-					                            </span>
-					                            <span class="button-content">Reception</span>
-					                        </a>
-					                        <a routerLink="/mrsbora/patient-dashboard/patient-triage" class="btn vertical-button hover-green" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-stethoscope"></i>
-					                            </span>
-					                            <span class="button-content">Triage</span>
-					                        </a>
-					                        <!--
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-orange" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-bicycle"></i>
-					                            </span>
-					                            <span class="button-content">Visits</span>
-					                        </a>
-					                    	-->
-					                        <a routerLink="/mrsbora/patient-dashboard/patient-encounters" class="btn vertical-button hover-purple" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-puzzle-piece"></i>
-					                            </span>
-					                            <span class="button-content">Encounters</span>
-					                        </a>
+		                        <div class="tile-content-wrapper">		                            
+	                                <div class="content-box remove-border dashboard-buttons clearfix">
 
-					                        <a routerLink="/mrsbora/patient-dashboard/patient-history" class="btn vertical-button hover-orange" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-moon-o"></i>
-					                            </span>
-					                            <span class="button-content">History</span>
-					                        </a>
+	                                	<a routerLink="/mrsbora/patient-dashboard/patient-triage" class="btn btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-stethoscope"></i>
+				                            </span>
+				                            <span class="button-content">Triage</span>
+				                        </a>
+				                        <a routerLink="/mrsbora/patient-dashboard/patient-encounters" class="btn btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-puzzle-piece"></i>
+				                            </span>
+				                            <span class="button-content">Encounters</span>
+				                        </a>
+				                        <a routerLink="/mrsbora/patient-dashboard/patient-lab-orders" class="btn btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-flask"></i>
+				                            </span>
+				                            <span class="button-content">Laboratory</span>
+				                        </a>
+				                        <a routerLink="/mrsbora/patient-dashboard/patient-drug-orders" class="btn  btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-adjust"></i>
+				                            </span>
+				                            <span class="button-content">Pharmacy</span>
+				                        </a>
+				                        <a routerLink="/mrsbora/patient-dashboard/reports" class="btn  btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-bar-chart"></i>
+				                            </span>
+				                            <span class="button-content">Reports</span>
+				                        </a>
+				                        <a routerLink="/mrsbora/patient-dashboard/notification" class="btn  btn-info vertical-button hover-green" title="">
+				                            <span class="glyph-icon icon-separator-vertical">
+				                                <i class="glyph-icon icon-linecons-megaphone"></i>
+				                            </span>
+				                            <span class="button-content">Notifications</span>
+				                        </a>
+				                    </div>
+				                    
+				                    <!-- router-outlet -->
+				                    <router-outlet></router-outlet>		
 
-					                        <a routerLink="/mrsbora/patient-dashboard/patient-lab-orders" class="btn vertical-button hover-yellow" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-flask"></i>
-					                            </span>
-					                            <span class="button-content">Lab Orders</span>
-					                        </a>
-
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-azure" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-adjust"></i>
-					                            </span>
-					                            <span class="button-content">Drug Orders</span>
-					                        </a>
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-red" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-picture-o"></i>
-					                            </span>
-					                            <span class="button-content">Results</span>
-					                        </a>					                        
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-orange" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-bar-chart"></i>
-					                            </span>
-					                            <span class="button-content">Report</span>
-					                        </a>
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-blue" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-linecons-megaphone"></i>
-					                            </span>
-					                            <span class="button-content">Notifications</span>
-					                        </a>
-					                        <a routerLink="/mrsbora/no-content" class="btn vertical-button hover-black" title="">
-					                            <span class="glyph-icon icon-separator-vertical">
-					                                <i class="glyph-icon icon-user"></i>
-					                            </span>
-					                            <span class="button-content">Profile</span>
-					                        </a>
-					                    </div>
-		                           
-		                        </div>
-		                    </div>
-		                </div>
-					</div>
-				</div>                
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>				
 			</div>
 
-			<router-outlet></router-outlet>			
+			<!-- <router-outlet></router-outlet>	-->		
 
 		</div>
 	</div>

@@ -7,8 +7,8 @@ import { PatientSearchService } from './patient-search.service';
 import { Patient } from '../models/patient.model';
 
 @Component({
-  templateUrl: 'app/patient-search/patient-search.component.html',
-  styleUrls: [ 'app/patient-search/patient-search.component.css' ]
+  templateUrl: './patient-search.component.html',
+  styleUrls: [ './patient-search.component.css' ]
 })
 
 

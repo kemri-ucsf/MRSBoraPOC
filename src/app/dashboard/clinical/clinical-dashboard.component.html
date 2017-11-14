@@ -1,0 +1,79 @@
+<div id="page-content-wrapper">
+	<div id="page-content">            
+		<div class="container">
+			<div id="page-title">
+				<h2>CLINICAL DASHBOARD</h2>
+				<p>Clinical Dashboard</p>
+			</div>
+		    <br>
+
+		    <div class="row">
+		    	<div class="col-md-2">
+	                <a routerLink="/mrsbora/clinical/queue" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-info">
+	                    <span class="bs-badge badge-absolute">15</span>
+	                    <div class="tile-header">
+	                        Patients Queue
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-bars"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/clinical/referrals" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-primary">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        Referrals
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-send-o"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/clinical/lab-results" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-success">
+	                    <span class="bs-badge badge-absolute">26</span>
+	                    <div class="tile-header">
+	                        Lab Results
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-flask"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/clinical/emergency" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-danger">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        Emergency Cases
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-bolt"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/clinical/reports" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-black-opacity">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        Reports
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-area-chart"></i>
+	                    </div>
+	                </a>
+	            </div>
+		    </div>
+		    <br>
+		    <br>
+
+			<router-outlet></router-outlet>	
+
+			
+		</div>
+	</div>
+</div>

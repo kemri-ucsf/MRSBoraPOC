@@ -1,0 +1,1 @@
+{"version":3,"file":"patient-history.component.js","sourceRoot":"","sources":["patient-history.component.ts"],"names":[],"mappings":";;;;;;;AAAA,sCAA0C;AAQ1C,IAAa,uBAAuB;IAApC;IAEA,CAAC;IAAD,8BAAC;AAAD,CAAC,AAFD,IAEC;AAFY,uBAAuB;IANnC,gBAAS,CAAC;QACP,uBAAuB;QACvB,WAAW,EAAE,uDAAuD;QACrE,SAAS,EAAE,CAAE,sDAAsD,CAAE;KACvE,CAAC;GAEW,uBAAuB,CAEnC;AAFY,0DAAuB"}

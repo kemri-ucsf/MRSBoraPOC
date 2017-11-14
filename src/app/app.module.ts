@@ -4,16 +4,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Components
-import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClinicalDashboardComponent } from './dashboard/clinical/clinical-dashboard.component';
+import { ClinicalQueueComponent } from './dashboard/clinical/queue.component';
+import { ClinicalReferralsComponent } from './dashboard/clinical/referrals.component';
+import { ClinicalLabResultsComponent } from './dashboard/clinical/lab-results.component';
+import { ClinicalEmergencyComponent } from './dashboard/clinical/emergency.component';
+import { ClinicalReportsComponent } from './dashboard/clinical/reports.component';
+
+
+import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './authenticate/login.component';
+
+import { ClinicalEncountersComponent } from './patient-encounters/clinical-encounters.component';
+import { SsdEncountersComponent } from './patient-encounters/ssd-encounters.component';
+
 import { ReceptionComponent } from './reception/reception.component'
+import { ReceptionNewComponent } from './reception/new.component'
+import { ReceptionNewPatientsComponent } from './reception/new-patients.component'
+import { ReceptionTbComponent } from './reception/tb.component'
+import { ReceptionScheduledComponent } from './reception/scheduled.component'
+import { ReceptionUnScheduledComponent } from './reception/unscheduled.component'
+import { ReceptionEmergencyComponent } from './reception/emergency.component'
+import { ReceptionReportsComponent } from './reception/reports.component'
+import { ReceptionQueueComponent } from './reception/queue.component'
+
 import { PatientSearchComponent }   from './patient-search/patient-search.component';
 import { PatientNewComponent } from './patient-new/patient-new.component';
 import { PatientDashboardComponent }   from './patient-search/patient-dashboard.component';
 import { PatientLabOrdersComponent } from './orders/patient-lab-orders.component';
+import { PatientDrugOrdersComponent } from './orders/patient-drug-orders.component';
 import { PatientEncountersComponent } from './patient-encounters/patient-encounters.component';
 import { PatientTriageComponent } from './patient-encounters/patient-triage.component';
 import { PatientHistoryComponent } from './patient-encounters/patient-history.component';
@@ -21,7 +42,12 @@ import { PatientClinicalComponent } from './patient-encounters/patient-clinical.
 import { LaboratoryDashboardComponent } from './orders/lab-dashboard.component';
 import { DrugOrdersComponent } from './orders/drug-orders.component';
 import { DrugsDashboardComponent } from './orders/drugs-dashboard.component';
+
 import { ReportDashboardComponent } from './reports/report-dashboard.component';
+import { ReportPatientComponent } from './reports/patient-report.component';
+
+import { NotificationComponent } from './notification/notification.component';
+
 import { NoContentComponent } from './no-content/no-content';
 
 
@@ -55,24 +81,50 @@ import { SessionStorageService } from './utils/session-storage.service'
     ngx_bootstrap.ModalModule,
   ],
   declarations: [
+    DashboardComponent,
+    ClinicalDashboardComponent,
+    ClinicalQueueComponent,
+    ClinicalReferralsComponent,
+    ClinicalLabResultsComponent,
+    ClinicalEmergencyComponent,
+    ClinicalReportsComponent,
+
     AppComponent,
     HomeComponent,
-    DashboardComponent,
     LoginComponent,
+
+    ClinicalEncountersComponent,
+    SsdEncountersComponent,
+
     ReceptionComponent,
+    ReceptionNewComponent,
+    ReceptionNewPatientsComponent,
+    ReceptionTbComponent,
+    ReceptionScheduledComponent,
+    ReceptionUnScheduledComponent,
+    ReceptionEmergencyComponent,
+    ReceptionReportsComponent,
+    ReceptionQueueComponent,
+
     PatientSearchComponent,
     PatientNewComponent,
     PatientDashboardComponent,
     PatientLabOrdersComponent,
+    PatientDrugOrdersComponent,
     PatientEncountersComponent,
     PatientTriageComponent,
     PatientClinicalComponent,
-    LaboratoryDashboardComponent,
     PatientHistoryComponent,
+
+    LaboratoryDashboardComponent,
     DrugOrdersComponent,
     DrugsDashboardComponent,
+
     ReportDashboardComponent,
-    NoContentComponent
+    ReportPatientComponent,
+
+    NoContentComponent,
+    NotificationComponent
   ],
   // entryComponents: [ngx_core.ModalBackdropComponent],
   providers: [

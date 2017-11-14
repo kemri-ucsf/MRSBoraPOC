@@ -7,8 +7,8 @@ import { Subscription } from 'rxjs';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: 'app/authenticate/login.component.html',
-  styleUrls: [ 'app/authenticate/login.component.css' ]
+  templateUrl: './login.component.html',
+  styleUrls: [ './login.component.css' ]
 })
 
 export class LoginComponent  implements OnInit {
@@ -28,6 +28,7 @@ export class LoginComponent  implements OnInit {
     public ngOnInit() {}
 
 	public login(username: string, password: string) {
+		/*
 		//event.stopPropagation();
     	//event.preventDefault();
     	let currentRoute = window.location.toString();
@@ -48,6 +49,8 @@ export class LoginComponent  implements OnInit {
 	         console.log('User Not authenticated! ');
 	       }
 	     });
+	     */
+	     this.router.navigate(['/mrsbora']);
 	}
 
 	public logout(){

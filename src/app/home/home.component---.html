@@ -1,0 +1,218 @@
+<div id="sb-site" style="min-height: 1471px;">
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-9">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+                <a href="#" class="logo-content-small" title="MonarchUI"></a>
+            </div>
+
+            <div id="header-logo" class="logo-bg">
+                <a href="#" class="logo-content-big" title="POCUI"></a>
+            </div>
+
+            <div id="header-nav-left">
+                <div>
+                    <br>
+                    <br>
+                    <span><h5 style="color:white;">Logged in as Administrator | Tue Jun 16 2009 10:47:10 GMT-0400</h5></span>
+                </div>               
+            </div>
+
+             <div id="header-nav-right">
+                <a href="#" class="hdr-btn popover-button" title="Search" data-placement="bottom" data-id="#popover-search">
+                    <i class="glyph-icon icon-search"></i>
+                </a>
+                <div class="hide" id="popover-search">
+                    <div class="pad5A box-md">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search terms here ...">
+                            <span class="input-group-btn">
+                                <a class="btn btn-primary" href="#">Search</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="notifications-btn">
+                    <a data-toggle="dropdown" href="#" title="">
+                        <span class="small-badge bg-yellow"></span>
+                        <i class="glyph-icon icon-linecons-megaphone"></i>
+                    </a>
+                    <div class="dropdown-menu box-md float-right">
+
+                        <div class="popover-title display-block clearfix pad10A">
+                            Notifications
+                            <a class="text-transform-cap font-primary font-normal btn-link float-right" href="#" title="View more options">
+                                More notifications...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="scrollable-content scrollable-slim-box">                    
+                    <ul class="no-border notifications-box">
+                        <li>
+                            <span class="bg-danger icon-notification glyph-icon icon-bullhorn"></span>
+                            <span class="notification-text">HB test lab order for KLM1003-987 has errors</span>
+                            <div class="notification-time">
+                                a few seconds ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bg-warning icon-notification glyph-icon icon-users"></span>
+                            <span class="notification-text font-blue">VL results for KLM100-222 is pending</span>
+                            <div class="notification-time">
+                                <b>15</b> minutes ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bg-green icon-notification glyph-icon icon-sitemap"></span>
+                            <span class="notification-text font-green">Scrag results for KLM100-222 is ready</span>
+                            <div class="notification-time">
+                                <b>2 hours</b> ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                -->
+                <div class="dropdown" id="dashnav-btn">
+                    <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
+                        <i class="glyph-icon icon-linecons-cog"></i>
+                    </a>
+                    <div class="dropdown-menu float-right">
+                        <div class="box-sm">
+                            <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                <a href="#" class="btn vertical-button hover-blue-alt" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-dashboard opacity-80 font-size-20"></i>
+                                    </span>
+                                    Dashboard
+                                </a>
+                                <a href="#" class="btn vertical-button hover-green" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-tags opacity-80 font-size-20"></i>
+                                    </span>
+                                    Reports
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lock Screen">
+                    <i class="glyph-icon icon-linecons-lock"></i>
+                </a>
+            </div>            
+        </div>
+
+        <div id="page-sidebar">
+            <div class="scroll-sidebar">
+                <ul id="sidebar-menu">
+                    <li class="header"><span>Overview</span></li>
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-linecons-tv"></i>
+                            <span><a routerLink="/mrsbora/dashboard">Dashboard</a></span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="no-menu">
+                        <a href="https://agileui.com/demo/monarch/demo/frontend-template/index.html" title="Frontend template">
+                            <i class="glyph-icon icon-area-chart"></i>
+                            <span><a routerLink="/mrsbora/no-content">Analytics</a></span>              
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="no-menu">
+                        <a href="https://agileui.com/demo/monarch/demo/frontend-template/index.html" title="Frontend template">
+                            <i class="glyph-icon icon-th"></i>
+                            <span><a routerLink="/mrsbora/no-content">Charts & Tables</a></span>                
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+
+                    
+                    <li class="header"><span>Patient</span></li>
+                    <!--
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-plus"></i>
+                            <span><a routerLink="/mrsbora/patient-new">New Patient</a></span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    -->
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-search"></i>
+                            <span><a routerLink="/mrsbora/patient-search">Patient Search</a></span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-bars"></i>
+                            <span><a routerLink="/mrsbora/patient-queue">Patient Queue</a></span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+
+
+                    <li class="header"><span>Orders</span></li>
+                    <li>
+                        <a href="#" title="Lab Orders">
+                            <i class="glyph-icon icon-flask"></i>
+                            <span><a routerLink="/mrsbora/lab-dashboard">Lab Orders</a></span>                        
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" title="Drug Orders">
+                            <i class="glyph-icon icon-adjust"></i>
+                            <span><a routerLink="/mrsbora/drugs-dashboard">Drug Orders</a></span>    
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+
+                    <li class="header"><span>Reports</span></li>
+                    <li>
+                        <a href="#" title="Reports">
+                            <i class="glyph-icon icon-file-pdf-o"></i>
+                            <span><a routerLink="/mrsbora/report-dashboard">Reports</a></span> 
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+
+                    <li class="header"><span>Settings</span></li>
+                    <li>
+                        <a href="#" title="Manage Concepts">
+                            <i class="glyph-icon icon-book"></i>
+                            <span><a routerLink="/mrsbora/no-content">Manage Concepts</a></span>                        
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" title="Manage Accounts">
+                            <i class="glyph-icon icon-users"></i>
+                            <span><a routerLink="/mrsbora/no-content">Manage Accounts</a></span>    
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" title="Manage System">
+                            <i class="glyph-icon icon-gears"></i>
+                            <span><a routerLink="/mrsbora/no-content">Manage System</a></span>                      
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>

@@ -3,8 +3,8 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: 'app/patient-encounters/patient-encounters.component.html',
-  styleUrls: [ 'app/patient-encounters/patient-encounters.component.css' ]
+  templateUrl: './patient-encounters.component.html',
+  styleUrls: [ './patient-encounters.component.css' ]
 })
 
 

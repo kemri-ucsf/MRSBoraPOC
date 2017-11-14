@@ -1,0 +1,150 @@
+<div id="page-content-wrapper">
+	<div id="page-content">            
+		<div class="container">
+			<div id="page-title">
+				<h2>CLINICAL DASHBOARD</h2>
+				<p>Clinical Dashboard</p>
+			</div>
+		    <br>
+
+		    <div class="row">
+		    	<div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/new-patients" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-info">
+	                    <span class="bs-badge badge-absolute">15</span>
+	                    <div class="tile-header">
+	                        New Patients
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-plus-square"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/tb" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-primary">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        TB Patients
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-user-md"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/scheduled" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-success">
+	                    <span class="bs-badge badge-absolute">26</span>
+	                    <div class="tile-header">
+	                        Scheduled
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-hand-o-up"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/unscheduled" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-warning">
+	                    <span class="bs-badge badge-absolute">4</span>
+	                    <div class="tile-header">
+	                        Unscheduled
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-hand-o-down"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/emergency" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-danger">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        Emergency
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-bolt"></i>
+	                    </div>
+	                </a>
+	            </div>
+
+	            <div class="col-md-2">
+	                <a routerLink="/mrsbora/reception/reports" title="Tile Shortcut" class="tile-box tile-box-shortcut btn-black-opacity">
+	                    <span class="bs-badge badge-absolute">5</span>
+	                    <div class="tile-header">
+	                        Reports
+	                    </div>
+	                    <div class="tile-content-wrapper">
+	                        <i class="glyph-icon icon-area-chart"></i>
+	                    </div>
+	                </a>
+	            </div>
+		    </div>
+		    <br>
+		    <br>
+			
+			<!--
+			<div class="row">
+				<a class="btn btn-default btn-lg" href="#">Tiger Nixon | Male | 46 years <span class="bs-badge badge-primary"><i class="glyph-icon icon-user"></i></span></a>
+			</div>
+			<br>
+			-->	
+
+			<router-outlet></router-outlet>	
+
+			<div class="row">
+	        	<div class="panel">
+		            <div class="panel-body">
+		                <div class="example-box-wrapper">
+		                    <div class="row">
+
+		                        <div class="col-md-12">
+		                            <button type="button" class="btn btn-info mrg20B collapsed" data-toggle="collapse" data-target="#demo-2" aria-expanded="false">
+		                                <h5 class="mrg10A">
+											<i class="glyph-icon icon-bars"></i> &nbsp;
+											<b>Patients Queue</b>
+										</h5>
+		                            </button>
+
+		                            <div id="demo-2" class="collapse" aria-expanded="false" style="height: 0px;">                           	
+                                		<br>
+                                        <div class="row">
+									    	<div class="col-md-4">	
+									    	<div class="example-box-wrapper">
+									    		<div class="input-group">
+								                    <input class="form-control" type="text" placeholder="Enter Patient Identifier or Patient Name">
+								                    <span class="input-group-btn">
+								                        <button class="btn btn-default btn-lg" type="button">
+								                        	<b><small>Search</small></b>
+								                        </button>
+								                    </span>
+								                </div>
+									    	</div>	    	
+								                
+								            </div>
+								        </div>
+
+								        <div class="row">
+						        			<div class="panel-body">							
+												<div class="example-box-wrapper">
+													<div class="list-group">
+								                        <a href="#" class="list-group-item">1. MIGO HUSSEIN EL SAFRA (UPN: KLM0098-123)<span class="badge bg-azure">Tue Jun 16 2009 10:00:10 GMT-0400</span></a>
+								                        <a href="#" class="list-group-item">2. JOHN OMUGA  JACKTONE (UPN: KLM0328-121)<span class="badge bg-azure">Tue Jun 16 2009 10:12:10 GMT-0400</span></a>
+								                        <a href="#" class="list-group-item">3. QUEENSLY OLILO (UPN: KLM666-097)<span class="badge bg-azure">Tue Jun 16 2009 10:32:10 GMT-0400</span></a>
+								                        <a href="#" class="list-group-item">4. JANE SHERYL OJWANG (UPN: KLM0954-109)<span class="badge bg-azure">Tue Jun 16 2009 10:40:10 GMT-0400</span></a>
+								                        <a href="#" class="list-group-item">5. MURKOMEN AGATHA (UPN: KLM005-876)<span class="badge bg-azure">Tue Jun 16 2009 10:47:10 GMT-0400</span></a>
+								                    </div>
+												</div>
+											</div>
+										</div>
+		                            </div>
+		                        </div>
+
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+	        </div>
+		</div>
+	</div>
+</div>

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   // selector: 'my-app',
-  templateUrl: 'app/reports/report-dashboard.component.html',
-  styleUrls: [ 'app/reports/report-dashboard.component.css' ]
+  templateUrl: './report-dashboard.component.html',
+  styleUrls: [ './report-dashboard.component.css' ]
 })
 
 

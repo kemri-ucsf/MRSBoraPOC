@@ -1,0 +1,68 @@
+<br>
+<div class="divider"></div>
+<br>
+
+<div class="row">
+	<div class="row">
+        <div class="col-md-4">              
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Enter Encounter Type">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button"><b><small>Search</small></b></button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-4">  
+            <button class="btn btn-primary" (click)="openModal(template)">
+                <i class="glyph-icon icon-plus"></i> <b><small>New Encounter</small></b>
+            </button>
+
+                      
+            
+            <ng-template #template>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Select Encounter</h4>
+                <button type="button" class="close pull-right" aria-label="X" (click)="modalRef.hide()">
+                  <span aria-hidden="true">X</span>
+                </button>
+              </div>
+              <div class="modal-body"  style="height: 280px; overflow: auto;" >
+
+                <button type="button" class="btn btn-default btn-block">SSD</button>   
+                <button type="button" class="btn btn-default btn-block" routerLink="/mrsbora/patient-dashboard/patient-clinical" (click)="modalRef.hide()">CLINICAL</button>
+              </div>
+            </ng-template>
+           
+            
+            
+        </div>
+    </div>
+    <br>
+
+    <div class="scroll-columns">
+        <table class="table table-bordered table-striped table-condensed table-hover cf">
+            <thead class="cf">
+            <tr>
+                <th><small>ENCOUNTER ID</small></th>
+                <th><small>ENCOUNTER TYPE</small></th>
+                <th><small>ENCOUNTER DATE</small></th>
+                <th><small>OPTIONS</small></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>23</td>
+                <td>PSC Initial</td>
+                <td>2011/07/25</td>
+                <td><span><a routerLink="/mrsbora/patient-dashboard">Details ...</a></span></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>PSC Return</td>
+                <td>2011/07/25</td>
+                <td><span><a routerLink="/mrsbora/patient-dashboard">Details ...</a></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>    
+</div>
