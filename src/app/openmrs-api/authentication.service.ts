@@ -19,11 +19,10 @@ export class AuthenticationService {
     private _cookieService: CookieService) { }
 
   public authenticate(username: string, password: string) {
-
     let credentials = {
       username: username,
       password: password
-    };    
+    };  
 
     let request = this.sessionService.getSession(credentials);
 
@@ -95,5 +94,9 @@ export class AuthenticationService {
 
   private clearUserDetails() {
     this.sessionStorageService.remove(Constants.USER_KEY);
+  }
+
+  public setUserRoles(userRoles: string) {
+    this.sessionStorageService.setItem(Constants.USER_ROLES, userRoles.toString());
   }
 }

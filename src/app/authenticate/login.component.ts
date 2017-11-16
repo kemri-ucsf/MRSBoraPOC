@@ -12,15 +12,12 @@ import { Subscription } from 'rxjs';
 })
 
 export class LoginComponent  implements OnInit {
-	@Output() public loginSuccess = new EventEmitter();
-  	@Output() public loginFailure = new EventEmitter();
-
 	public username: string;
 	public password: string;
 	public error: string;
 	public shouldRedirect: boolean = false;
 	public subscription: Subscription;
-
+	
 	constructor(private router: Router,
               	private authenticationService: AuthenticationService){		
 	}
@@ -28,29 +25,26 @@ export class LoginComponent  implements OnInit {
     public ngOnInit() {}
 
 	public login(username: string, password: string) {
-		/*
-		//event.stopPropagation();
-    	//event.preventDefault();
     	let currentRoute = window.location.toString();
-    	console.log('currentRoute: ' + currentRoute);
-    	console.log('username: ' + username + '  password: ' + password);
+	    let userRoles: Array<string> = [];
 
-		username = this.username;
-		password = this.password;
 		this.subscription = this.authenticationService.authenticate(username, password)
 	      .subscribe(
 	     (response: Response) => {
 	       let data = response.json();
+	       let roles = data.user.roles;
+	       for (let role of roles) {
+	       		userRoles.push(role.display);
+	       }
 
 	       if (data.authenticated) {
+	       	 this.authenticationService.setUserRoles(userRoles);
 	         this.router.navigate(['/mrsbora']);
 	       }
 	       else {
 	         console.log('User Not authenticated! ');
 	       }
 	     });
-	     */
-	     this.router.navigate(['/mrsbora']);
 	}
 
 	public logout(){

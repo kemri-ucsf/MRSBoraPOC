@@ -64,6 +64,7 @@ import { AuthenticationService } from './openmrs-api/authentication.service';
 import { SessionService } from './openmrs-api/session.service';
 import { PatientSearchService } from './patient-search/patient-search.service';
 import { PatientResourceService } from './openmrs-api/patient-resource.service';
+import { UserService } from './openmrs-api/user.service';
 
 // Custom Service Providers
 import { AppSettingsService } from './settings/app-settings.service'
@@ -143,7 +144,8 @@ import { SessionStorageService } from './utils/session-storage.service'
     // custom providers
     AppSettingsService,
     LocalStorageService,
-    SessionStorageService
+    SessionStorageService,
+    UserService
   ],
   bootstrap: [ 
     AppComponent

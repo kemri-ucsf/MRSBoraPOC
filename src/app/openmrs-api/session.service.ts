@@ -16,14 +16,12 @@ export class SessionService {
   }
 
   public getSession(credentials: any = null) {
-    // this.setSession(credentials);
-    // let headers = new Headers();
     let headers = new Headers();
 
     if (credentials && credentials.username) {
       let base64 = btoa(credentials.username + ':' + credentials.password);
-      headers.append('Authorization', 'Basic ' + base64);
 
+      headers.append('Authorization', 'Basic ' + base64);
     }
 
     let url = this.getUrl();
@@ -32,23 +30,6 @@ export class SessionService {
       headers: headers
     });
   }
-
-  /*
-  public setSession(credentials: any = null) {
-    let username = credentials.username;
-    let password = credentials.password;
-    let creds = "username=" + username + "&password=" + password;
-    let headers = new Headers();
-    if (credentials && credentials.username) {
-       headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    } 
-
-    let url = this.getUrl();
-    return this.http.post(url, creds, {
-      headers: headers
-      });
-  }
-  **/
 
   public deleteSession() {
 

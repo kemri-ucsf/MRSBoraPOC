@@ -1,10 +1,21 @@
 <div class="center-vertical">
     <div class="center-content row">
+
+        <br>
+        <br>
         <form id="login-validation" class="col-md-4 col-sm-5 col-xs-11 col-lg-3 center-margin" (submit)="login(username.value, password.value)">
-            <h3 class="text-center pad25B font-gray text-transform-upr font-size-23">MRS BORA <span class="opacity-80">v1.0</span></h3>
+            
+            <!--
+            <h3 class="text-center pad25B font-gray text-transform-upr font-size-23">
+                MRS BORA <span class="opacity-80">v1.0</span></h3>
+            -->
+            <div id="page-title">
+                <img class="mrg25B center-margin radius-all-100 display-block" src="assets/images/faces-logo.jpg" alt="Image 404 Error">
+                <h2 class="text-center">MRS BORA</h2>
+                <p  class="text-center">Please Login</p>
+            </div>
             <div id="login-form" class="content-box bg-default">
                 <div class="content-box-wrapper pad20A">
-                    <img class="mrg25B center-margin radius-all-100 display-block" src="../app/assets/image-resources/hospital.jpg" alt="">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon addon-inside bg-gray">
@@ -23,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <!-- <a routerLink="/mrsbora" class="btn btn-block btn-primary">Login</a> -->
-                        <button class="btn btn-block btn-primary" type="submit">
+                        <button class="btn btn-block btn-success" type="submit">
                             <b><small>Login</small></b>
                         </button>
                     </div>
