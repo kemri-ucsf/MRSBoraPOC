@@ -14,7 +14,7 @@
                 <div>
                     <br>
                     <br>
-                    <span><h5 style="color:white;">Logged in as {{ userName }} | Tue Jun 16 2009 10:47:10 GMT-0400</h5></span>
+                    <span><h5 style="color:white;">Logged in as {{ userName }} | <span>Date: &nbsp;{{ todayDate }}</span></h5></span>
                 </div>               
             </div>
 
@@ -102,8 +102,8 @@
                         </div>
                     </div>
                 </div>
-                <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lock Screen">
-                    <i class="glyph-icon icon-linecons-lock"></i>
+                <a href="" data-placement="bottom" class="header-btn tooltip-button" id="logout-btn" title="Logout" (click)="logout()">
+                    <i class="glyph-icon icon-power-off"></i>
                 </a>
             </div>            
         </div>
@@ -135,72 +135,91 @@
                     <li class="divider"></li>
 
                     <li class="header"><span>Dashboards</span></li>
-                    <li>
-                        <a href="" title="Admin Dashboard">
-                            <i class="glyph-icon icon-fax"></i>
-                            <span><a routerLink="/mrsbora/patient-search">Reception</a></span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                     <li>
-                        <a href="" title="Admin Dashboard">
-                            <i class="glyph-icon icon-male"></i>
-                            <span><a routerLink="/mrsbora/patient-queue">SSD</a></span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                     <li>
-                        <a href="" title="Admin Dashboard">
-                            <i class="glyph-icon icon-user-md"></i>
-                            <span><a routerLink="/mrsbora/clinical/queue">Clinical</a></span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                     <li>
-                        <a href="" title="Admin Dashboard">
-                            <i class="glyph-icon icon-flask"></i>
-                            <span><a routerLink="/mrsbora/dashboard">Laboratory</a></span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                     <li>
-                        <a href="" title="Admin Dashboard">
-                            <i class="glyph-icon icon-adjust"></i>
-                            <span><a routerLink="/mrsbora/dashboard">Pharmacy</a></span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
 
-                    <li class="header"><span>Reports</span></li>
-                    <li>
-                        <a href="#" title="Reports">
-                            <i class="glyph-icon icon-file-pdf-o"></i>
-                            <span><a routerLink="/mrsbora/report-dashboard">Reports</a></span> 
-                        </a>
-                    </li>
-                    <li class="divider"></li>
+                    <div *ngIf="isReception||isSuperUser">
+                        <li>
+                            <a href="" title="Admin Dashboard">
+                                <i class="glyph-icon icon-fax"></i>
+                                <span><a routerLink="/mrsbora/patient-search">Reception</a></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
 
-                    <li class="header"><span>Settings</span></li>
-                    <li>
-                        <a href="#" title="Manage Concepts">
-                            <i class="glyph-icon icon-book"></i>
-                            <span><a routerLink="/mrsbora/no-content">Manage Concepts</a></span>                        
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#" title="Manage Accounts">
-                            <i class="glyph-icon icon-users"></i>
-                            <span><a routerLink="/mrsbora/no-content">Manage Accounts</a></span>    
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#" title="Manage System">
-                            <i class="glyph-icon icon-gears"></i>
-                            <span><a routerLink="/mrsbora/no-content">Manage System</a></span>                      
-                        </a>
-                    </li>
+                    <div *ngIf="isSsd||isSuperUser">
+                        <li>
+                            <a href="" title="Admin Dashboard">
+                                <i class="glyph-icon icon-male"></i>
+                                <span><a routerLink="/mrsbora/patient-queue">SSD</a></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
+
+                    <div *ngIf="isClinical||isSuperUser">
+                        <li>
+                            <a href="" title="Admin Dashboard">
+                                <i class="glyph-icon icon-user-md"></i>
+                                <span><a routerLink="/mrsbora/clinical/queue">Clinical</a></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
+
+                    <div *ngIf="isLab||isSuperUser">
+                        <li>
+                            <a href="" title="Admin Dashboard">
+                                <i class="glyph-icon icon-flask"></i>
+                                <span><a routerLink="/mrsbora/dashboard">Laboratory</a></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
+
+                    <div *ngIf="isPharmacy||isSuperUser">
+                        <li>
+                            <a href="" title="Admin Dashboard">
+                                <i class="glyph-icon icon-adjust"></i>
+                                <span><a routerLink="/mrsbora/dashboard">Pharmacy</a></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
+
+                    <div *ngIf="isSuperUser||isSuperUser">
+                        <li class="header"><span>Reports</span></li>
+                        <li>
+                            <a href="#" title="Reports">
+                                <i class="glyph-icon icon-file-pdf-o"></i>
+                                <span><a routerLink="/mrsbora/report-dashboard">Reports</a></span> 
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </div>
+
+                    <div *ngIf="isSuperUser||isSuperUser">
+                        <li class="header"><span>Settings</span></li>
+                        <li>
+                            <a href="#" title="Manage Concepts">
+                                <i class="glyph-icon icon-book"></i>
+                                <span><a routerLink="/mrsbora/no-content">Manage Concepts</a></span>                        
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" title="Manage Accounts">
+                                <i class="glyph-icon icon-users"></i>
+                                <span><a routerLink="/mrsbora/no-content">Manage Accounts</a></span>    
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" title="Manage System">
+                                <i class="glyph-icon icon-gears"></i>
+                                <span><a routerLink="/mrsbora/no-content">Manage System</a></span>                      
+                            </a>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>

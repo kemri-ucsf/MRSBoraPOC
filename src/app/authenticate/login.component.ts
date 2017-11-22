@@ -26,7 +26,7 @@ export class LoginComponent  implements OnInit {
 
 	public login(username: string, password: string) {
     	let currentRoute = window.location.toString();
-	    let userRoles: Array<string> = [];
+	    let userRoles : any = [];
 
 		this.subscription = this.authenticationService.authenticate(username, password)
 	      .subscribe(
@@ -45,10 +45,6 @@ export class LoginComponent  implements OnInit {
 	         console.log('User Not authenticated! ');
 	       }
 	     });
-	}
-
-	public logout(){
-		this.authenticationService.logOut();
 	}
 	
 }

@@ -54,6 +54,7 @@ import { NoContentComponent } from './no-content/no-content';
 // Modules
 import { AppRoutingModule }     from './settings/app-routing.module';
 import { CookieModule } from 'ngx-cookie';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 // External Lib Service Providers
 import * as ngx_bootstrap from 'ngx-bootstrap';
@@ -79,6 +80,7 @@ import { SessionStorageService } from './utils/session-storage.service'
     AppRoutingModule,
     HttpModule,
     CookieModule.forRoot(),
+    NgxPaginationModule,
     ngx_bootstrap.ModalModule,
   ],
   declarations: [

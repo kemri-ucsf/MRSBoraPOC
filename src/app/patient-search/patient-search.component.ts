@@ -23,6 +23,7 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 	public subscription: Subscription;
 	public title: string = 'Patient Search';
 	public errorMessage: string = '';
+	public noMatchingResults: boolean = false;
 
 	/*
 	patientSelected emits the patient object
@@ -34,7 +35,9 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 	patient search
 
 	*/
-	@Output() public patientSelected: EventEmitter<any> = new EventEmitter<any>();
+	@Output() 
+	public patientSelected: EventEmitter<any> = new EventEmitter<any>();
+	public patientSearchString: string;
 	@Input() public hideResults: boolean = false;
 
 	private _searchString: string;
@@ -47,17 +50,18 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 	}
 
 	constructor(private patientSearchService: PatientSearchService,
-	          // private route: ActivatedRoute,
-	          // private appFeatureAnalytics: AppFeatureAnalytics,
-	          // private router: Router
+	          	private router: Router
 	          ) { }
 
-	public ngOnInit() {}
+	public ngOnInit() {
+		this.totalPatients = 0;
+		this.noMatchingResults = true;
+	}
 
 	public ngOnDestroy() {}
 
 	public onResultsFound(results) {
-	    if (results.length > 0) {	      
+	    if (results.length > 0) {      
 	      this.patients = results;
 	      this.totalPatients = this.patients.length;
 	      this.hideResults = false;
@@ -67,7 +71,7 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 	      this.hideResults = true;
 	    }
 	    // clear the search text
-	    this.searchString = '';
+	    this.patientSearchString= ' matching "' + this.searchString + '"';
 	    this.hasConductedSearch = true;
 	  }
 
@@ -81,7 +85,7 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 			this.subscription.unsubscribe();
 		}
 
-		if (this.searchString && this.searchString.length > 2){
+		if (this.searchString && this.searchString.length > 3){
 			this.isLoading = true;
 			this.patients = [];
 			this.errorMessage = '';
@@ -91,6 +95,9 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 					  this.isLoading = false;
 					  this.onResultsFound(data);
 					  this.resetInputMargin();
+					  if (data.length === 0) {
+            				this.noMatchingResults = true;
+            		  }
 					  // app feature analytics
 					  // this.appFeatureAnalytics.trackEvent('Patient Search', 'Patients Searched', 'loadPatient');
 			},
@@ -100,6 +107,13 @@ export class PatientSearchComponent  implements OnInit, OnDestroy{
 			);
 		}
 	}
+
+	public selectPatient(patient) {
+	      this.patientSelected.emit(patient);
+	      this.hideResults = true;
+	      console.log(patient);
+	      this.router.navigate(['/mrsbora/reception/new']);
+	 }
 
 	public resetInputMargin() {}
 

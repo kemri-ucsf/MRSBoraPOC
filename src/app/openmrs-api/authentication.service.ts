@@ -39,6 +39,9 @@ export class AuthenticationService {
           // store logged in user details in session storage
           let user = data.user;
           this.storeUser(user);
+
+          let jsessionid = data.sessionId;
+          this.storeSessionId(jsessionid)
         }
       });
 
@@ -78,18 +81,20 @@ export class AuthenticationService {
   }
 
   private setCredentials(username: string, password: string) {
-
     let base64 = btoa(username + ':' + password);
     this.sessionStorageService.setItem(Constants.CREDENTIALS_KEY, base64);
   }
 
   private clearCredentials() {
-
     this.sessionStorageService.remove(Constants.CREDENTIALS_KEY);
   }
 
   private storeUser(user: any) {
     this.sessionStorageService.setObject(Constants.USER_KEY, user);
+  }
+
+  private storeSessionId(jsessionid: any) {
+    this.sessionStorageService.setItem(Constants.SESSION_ID, jsessionid);
   }
 
   private clearUserDetails() {
